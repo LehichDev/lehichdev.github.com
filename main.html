@@ -1,0 +1,222 @@
+6<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LehDev - Главная</title>
+    <style>
+        /* Общие настройки для всего сайта */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* Меню (Шапка) */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: white;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .menu-links a {
+            text-decoration: none;
+            color: #777;
+            margin-left: 20px;
+            font-size: 16px;
+            padding-bottom: 5px;
+        }
+
+        .menu-links a.active {
+            color: #333;
+            border-bottom: 2px solid #333; /* Подчеркивание для "Начало" */
+        }
+
+        .menu-links a:hover {
+            color: #000;
+        }
+
+        /* Баннер (Синяя часть) */
+        .hero {
+            /* Здесь мы делаем синий градиент, похожий на волны */
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Если у тебя будет картинка волн, раскомментируй строку ниже и вставь ссылку */
+        /* .hero { background-image: url('ССЫЛКА_НА_КАРТИНКУ'); background-size: cover; } */
+
+        .hero h1 {
+            font-weight: 300; /* Тонкий шрифт */
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            background-color: white;
+            color: #333;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px; /* Закругленные кнопки */
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px); /* Эффект при наведении */
+        }
+
+        /* Основной контент */
+        .container {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 48px;
+            color: #333;
+            margin-bottom: 50px;
+            line-height: 1.2;
+        }
+
+        /* Список (Аккордеон) */
+        .info-item {
+            border-top: 1px solid #eee;
+            padding: 20px 0;
+        }
+        
+        .info-item:last-child {
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .info-title {
+            color: #4a90e2; /* Синий цвет заголовков */
+            font-size: 22px;
+            font-weight: 400;
+        }
+
+        /* Стрелочка справа */
+        .arrow {
+            border: solid #333;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 5px;
+            transform: rotate(-135deg); /* Стрелка вверх */
+        }
+
+        .info-desc {
+            margin-top: 15px;
+            color: #666;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Подсветка языков (Python, Java и т.д.) */
+        .tag {
+            background-color: #f3f0ff; /* Светло-фиолетовый фон */
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Меню -->
+    <nav>
+        <div class="logo">LehDev</div>
+        <div class="menu-links">
+            <a href="#" class="active">Начало</a>
+            <a href="#">Новости</a>
+            <a href="#">Задать Вопрос</a>
+            <a href="#">Загрузки</a>
+            <a href="#">LehDev Play</a>
+        </div>
+    </nav>
+
+    <!-- Баннер -->
+    <div class="hero">
+        <h1>Привествуем на главной странице LehDev</h1>
+        <div class="hero-buttons">
+            <a href="#" class="btn">Скачать наши продукты</a>
+            <a href="#" class="btn">Задать нам вопрос!</a>
+        </div>
+    </div>
+
+    <!-- Контент -->
+    <div class="container">
+        <h2 class="section-title">На каких языках мы пишем<br>продукты?</h2>
+
+        <!-- Пункт 1 -->
+        <div class="info-item">
+            <div class="info-header">
+                <span class="info-title">Продукты для Windows</span>
+                <i class="arrow"></i>
+            </div>
+            <p class="info-desc">
+                Мы пишем наши продукты на Windows с помощью простого языка программирования <span class="tag">Python</span>
+            </p>
+        </div>
+
+        <!-- Пункт 2 -->
+        <div class="info-item">
+            <div class="info-header">
+                <span class="info-title">Игры на Android</span>
+                <i class="arrow"></i>
+            </div>
+            <p class="info-desc">
+                Мы пишем наши игры на Android с помощью языков программирования <span class="tag">C++</span> и <span class="tag">Java</span>
+            </p>
+        </div>
+
+        <!-- Пункт 3 -->
+        <div class="info-item">
+            <div class="info-header">
+                <span class="info-title">Игры на Windows</span>
+                <i class="arrow"></i>
+            </div>
+            <p class="info-desc">
+                Мы пишем наши игры на Windows с помощью языков программирования <span class="tag">Python</span> и <span class="tag">C++</span>
+            </p>
+        </div>
+
+    </div>
+
+</body>
+  </html>
